@@ -82,3 +82,9 @@ Thumbs.db
 .idea/
 *.swp
 *.swo
+
+
+PORT=3000
+MONGODB_URI=your_mongo_connection_string
+MONGODB_DB_NAME=your_db_name
+GROQ_API_KEY=your_groq_api_key

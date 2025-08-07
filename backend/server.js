@@ -167,29 +167,6 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../frontend/index.html"));
 });
 
-// Start server (for local dev or non-serverless)
-const server = app.listen(PORT, async () => {
-  console.log("🚀".repeat(20));
-  console.log(`🚀 Session Analyzer with Gemini starting...`);
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
-  console.log("🚀".repeat(20));
-  console.log("🔄 Initializing application...\n");
-
-  try {
-    await initPromise;
-    console.log("\n" + "🎉".repeat(20));
-    console.log("🎉 Application ready!");
-    console.log("🎉 Using Google Gemini 1.5 Flash");
-    console.log("🎉 Free tier: 15 RPM, 1M TPM, 1.5K RPD");
-    console.log("🎉".repeat(20));
-  } catch (error) {
-    console.error("❌ Failed to initialize:", error.message);
-    if (process.env.NODE_ENV !== "production") {
-      process.exit(1);
-    }
-  }
-});
-
 // Graceful shutdown
 process.on("SIGINT", async () => {
   console.log("\n🔄 Shutting down gracefully...");

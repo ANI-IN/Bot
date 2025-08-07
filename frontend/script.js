@@ -1,9 +1,6 @@
 ///Users/animesh/Desktop/session-analyzer-gemini/frontend/script.js
 // Configuration - Auto-detect environment
-const API_BASE_URL =
-  window.location.hostname === "localhost"
-    ? "/api" // Local development
-    : "https://your-backend-url.vercel.app/api"; // Production
+const API_BASE_URL = "/api"; // Production
 
 // Global state
 let isLoading = false;
